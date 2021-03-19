@@ -41,6 +41,11 @@ li {
 a {
     text-decoration: none;
 }
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
 .open {
     display: none;
     align-items: center;
@@ -89,7 +94,7 @@ a {
 .header {
     background-color: #ffffff;
     padding: 14px 0;
-    box-shadow: 0px 4px 4px #F7F0FF;
+    box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
     &__inner {
         display: flex;
         flex-direction: row;
@@ -145,6 +150,28 @@ a {
                 transition: .2s linear;
             }
         }
+    }
+    &__button {
+        display: none;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        svg {
+            width: 25px;
+            height: 25px;
+            fill: $dark;
+        }
+    }
+}
+.menu {
+    display: none;
+    &__link {
+        color: $dark;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
     }
 }
 .title {
@@ -307,7 +334,7 @@ a {
     justify-content: center;
     width: 255px;
     height: 65px;
-    padding: 23px 30px 24px 27px;
+    padding: 23px 27px 24px 27px;
     background: $dark;
     box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
     border-radius: 25px 0px;
@@ -1111,11 +1138,33 @@ a {
 @media (max-width: 834px) {
     .header {
         box-shadow: none;
+        &__inner {
+            position: relative;
+        }
         &__menu {
             display: none;
         }
         &__logo {
-            margin: 0 auto;
+            // margin: 0 auto;
+        }
+        &__button {
+            display: block;
+        }
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        z-index: 100;
+        &__link {
+            display: none;
+            padding: 10px;
         }
     }
     .intro {
@@ -1461,6 +1510,13 @@ a {
             font-size: 12px;
         }
     }
+    .subtitle {
+        &--bonus {
+            &::before {
+                display: none;
+            }
+        }
+    }
 }
 @media (max-width: 568px) {
     .container {
@@ -1579,7 +1635,6 @@ a {
         }
     }
     .course {
-        padding: 0;
         &__inner {
             &--item {
                 width: 80%;
