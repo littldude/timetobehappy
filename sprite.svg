@@ -94,4 +94,9 @@
 			</defs>
 		</g>
 	</symbol>
+	<symbol id="cross" viewBox="0 0 15 15">
+		<g>
+			<path d="M6.49 14.7V8.52H0.25V6.36H6.49V0.179999H8.71V6.36H14.95V8.52H8.71V14.7H6.49Z" fill="#231F20"/>
+		</g>
+	</symbol>
 </svg>
