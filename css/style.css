@@ -24,6 +24,7 @@ body {
   background-color: #ffffff;
   font-family: "Gotham Pro";
   font-weight: 500;
+  min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
@@ -43,6 +44,12 @@ button,
 button:active,
 button:focus {
   outline: none;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .open {
@@ -162,18 +169,7 @@ button:focus {
   background-color: transparent;
   cursor: pointer;
 }
-
-.menu {
-  display: none;
-}
-.menu__link {
-  color: #231F20;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.burger {
+.header__button span {
   margin: 10px 0;
   display: block;
   width: 20px;
@@ -181,30 +177,46 @@ button:focus {
   background-color: #FF939C;
   position: relative;
 }
-.burger::before {
-  top: 5px;
+.header__button span::before, .header__button span::after {
   position: absolute;
   content: "";
   display: block;
   width: 20px;
   height: 2px;
   background-color: #FF939C;
-  transition: 2s linear;
+  transition: 0.2s linear;
 }
-.burger::after {
+.header__button span::before {
+  top: 5px;
+}
+.header__button span::after {
   bottom: 5px;
-  position: absolute;
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: #FF939C;
-  transition: 2s linear;
+}
+.header__button--active span {
+  height: 0;
+}
+.header__button--active span::before {
+  transform: rotate(45deg);
+  top: 0px;
+}
+.header__button--active span::after {
+  transform: rotate(-45deg);
+  bottom: -2px;
 }
 
-.header__button_active {
-  transform: rotate(45deg);
-  transition: 2s;
+.menu {
+  display: none;
+  position: absolute;
+}
+.menu__link {
+  color: #231F20;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+.menu__link:last-child {
+  margin-bottom: 0;
 }
 
 .title {
@@ -408,6 +420,15 @@ button:focus {
 .button--buy {
   margin: 0 auto;
 }
+.button--sticky {
+  position: sticky;
+  top: 130px;
+  left: 100%;
+  z-index: 1000;
+  transform: rotate(270deg);
+  box-shadow: none;
+  transform-origin: 100% 100%;
+}
 
 .list__item {
   display: flex;
@@ -447,6 +468,13 @@ button:focus {
   scrollbar-color: #A66230 #E6DAD2;
   scrollbar-width: thin;
   padding: 0 30px 0 0;
+}
+.list__results::-webkit-scrollbar {
+  width: 3px;
+  background-color: #E6DAD2;
+}
+.list__results::-webkit-scrollbar-thumb {
+  background-color: #A66230;
 }
 .list__sessions {
   padding: 35px 100px 36px 60px;
@@ -854,6 +882,7 @@ button:focus {
 .footer {
   background-color: #231F20;
   padding: 80px 0 90px 0;
+  margin-top: auto;
 }
 .footer__inner {
   display: flex;
@@ -1068,7 +1097,7 @@ button:focus {
   }
 }
 @media (max-width: 834px) {
-  .header__inner {
+  .header {
     position: relative;
   }
   .header__menu {
@@ -1092,7 +1121,12 @@ button:focus {
   }
   .menu__link {
     display: none;
-    padding: 10px;
+  }
+  .menu__link:first-of-type {
+    padding-top: 47px;
+  }
+  .menu__link:last-child {
+    padding-bottom: 44px;
   }
 
   .intro {

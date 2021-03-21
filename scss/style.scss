@@ -31,6 +31,7 @@ body {
     background-color: #ffffff;
     font-family: 'Gotham Pro';
     font-weight: 500;
+    min-height: 100%;
 }
 h1,h2,h3,h4,h5,h6,p,ul,li {
     margin: 0;
@@ -46,6 +47,11 @@ button,
 button:active, 
 button:focus {
     outline: none;
+}
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .open {
     display: none;
@@ -92,6 +98,7 @@ button:focus {
     }
 }
 .header {
+    // margin-top: -63px;
     background-color: #ffffff;
     padding: 14px 0;
     box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
@@ -158,48 +165,58 @@ button:focus {
         border: none;
         background-color: transparent;
         cursor: pointer;
+        span {
+            margin: 10px 0;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #FF939C;
+            position: relative;
+            &::before, 
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 20px;
+                height: 2px;
+                background-color: #FF939C;
+                transition: .2s linear;
+            }
+            &::before {
+                top: 5px;
+            }
+            &::after {
+                bottom: 5px;
+            }
+        }
+        &--active {
+            span {
+                height: 0;
+                &::before {
+                    transform: rotate(45deg);
+                    top: 0px;
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                    bottom: -2px;
+                }
+            }
+        }
     }
 }
 .menu {
     display: none;
+    position: absolute;
     &__link {
         color: $dark;
         font-weight: 500;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 10px; 
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
-}
-.burger {
-    margin: 10px 0;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #FF939C;
-    position: relative;
-    &::before {
-        top: 5px;
-        position: absolute;
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background-color: #FF939C;
-        transition: 2s linear;
-    }
-    &::after {
-        bottom: 5px;
-        position: absolute;
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background-color: #FF939C;
-        transition: 2s linear;
-    }
-}
-.header__button_active {
-    transform: rotate(45deg);
-    transition: 2s;
 }
 .title {
     font-weight: 700;
@@ -400,6 +417,15 @@ button:focus {
     &--buy {
         margin: 0 auto;
     }
+    &--sticky {
+        position: sticky;
+        top: 130px;
+        left: 100%;
+        z-index: 1000;
+        transform: rotate(270deg);
+        box-shadow: none;
+        transform-origin: 100% 100%;
+    }
 
 }
 .list {
@@ -445,6 +471,13 @@ button:focus {
         scrollbar-color: #A66230 #E6DAD2;
         scrollbar-width: thin;
         padding: 0 30px 0 0;
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: #E6DAD2;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #A66230;
+        }
     }
     &__sessions {
         padding: 35px 100px 36px 60px;
@@ -912,6 +945,7 @@ button:focus {
 .footer {
     background-color: $dark;
     padding: 80px 0 90px 0;
+    margin-top: auto;
     &__inner {
         display: flex;
         flex-direction: row;
@@ -1164,9 +1198,7 @@ button:focus {
 }
 @media (max-width: 834px) {
     .header {
-        &__inner {
-            position: relative;
-        }
+        position: relative;
         &__menu {
             display: none;
         }
@@ -1187,7 +1219,12 @@ button:focus {
         z-index: 100;
         &__link {
             display: none;
-            padding: 10px;
+            &:first-of-type {
+                padding-top: 47px;
+            }
+            &:last-child {
+                padding-bottom: 44px;
+            }
         }
     }
     .intro {
