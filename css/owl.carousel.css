@@ -388,6 +388,11 @@
 		right: -15px;
 	}
 }
+@media (max-width: 467px) {
+    .owl-next {
+		right: -9px;
+	}
+}
 @media (max-width: 414px) {
 	.owl-carousel .owl-nav button.owl-prev,
 	.owl-carousel .owl-nav button.owl-next,

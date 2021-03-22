@@ -371,6 +371,9 @@ button:focus {
         color: #A66230;
         font-weight: 700;
     }
+    &--currency {
+        font-size: 21px;
+    }
 }
 .button {
     display: flex;
@@ -1281,6 +1284,9 @@ button:focus {
         }
         &--buy {
             margin: 0 auto;
+        }
+        &--sticky {
+            display: none;
         }
     }
     .text {
