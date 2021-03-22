@@ -231,11 +231,16 @@ button:focus {
   position: relative;
 }
 .title--intro::before {
-  content: url("../ellips.svg");
+  content: "";
   display: block;
+  width: 466px;
+  height: 466px;
+  background: #FFDDC4;
+  opacity: 0.5;
+  filter: blur(200px);
   position: absolute;
-  top: -385px;
-  left: -362px;
+  top: -100px;
+  left: -70px;
   z-index: -1;
 }
 .title--white {
@@ -261,10 +266,16 @@ button:focus {
   position: relative;
 }
 .subtitle--bonus::before {
-  content: url("../ellips.svg");
+  content: "";
+  display: block;
+  width: 326px;
+  height: 326px;
+  background: #FFDDC4;
+  opacity: 0.5;
+  filter: blur(200px);
   position: absolute;
-  top: -477px;
-  left: -394px;
+  top: -215px;
+  left: -62px;
   z-index: -1;
 }
 .subtitle--white {
@@ -708,10 +719,16 @@ button:focus {
   border-radius: 20px;
 }
 .results__inner--item::before {
-  content: url("../ellips.svg");
+  content: "";
+  display: block;
+  width: 559px;
+  height: 559px;
+  background: #FFDDC4;
+  opacity: 0.5;
+  filter: blur(200px);
   position: absolute;
-  top: -35%;
-  left: -116%;
+  top: 0px;
+  left: -102%;
   z-index: -1;
 }
 .results__inner--item__short {
@@ -1176,13 +1193,7 @@ button:focus {
     margin: 30px auto 0 auto;
   }
   .button--intro::after {
-    display: block;
-    content: url("../ellips.svg");
-    position: absolute;
-    top: 243px;
-    right: 0;
-    z-index: -1;
-    opacity: 0.6;
+    display: none;
   }
   .button--buy {
     margin: 0 auto;
