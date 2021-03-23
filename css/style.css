@@ -756,6 +756,22 @@ button:focus {
 .review__inner--item:nth-child(2n) {
   flex-direction: row-reverse;
 }
+.review__video {
+  margin-top: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space;
+}
+.review__video--item {
+  display: block;
+  width: 378px;
+}
+.review__video--item iframe {
+  display: block;
+  width: 355px;
+  height: 199px;
+  border-radius: 25px;
+}
 .review__img {
   display: block;
   width: 174px;
@@ -1076,6 +1092,18 @@ button:focus {
   .results__inner--item {
     width: 500px;
     margin: 0 auto;
+  }
+
+  .review__video {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .review__video--item {
+    margin-bottom: 30px;
+  }
+  .review__video--item:last-child {
+    margin-bottom: 0;
   }
 
   .program__item {
@@ -1718,6 +1746,16 @@ button:focus {
   }
   .review__img {
     right: 20px;
+  }
+  .review__video {
+    margin-top: 55px;
+  }
+  .review__video--item {
+    width: 290px;
+  }
+  .review__video--item iframe {
+    width: 290px;
+    height: 160px;
   }
 
   .sessions__img {

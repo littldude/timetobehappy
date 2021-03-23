@@ -792,6 +792,22 @@ button:focus {
             }
         }
     }
+    &__video {
+        margin-top: 95px;
+        display: flex;
+        align-items: center;
+        justify-content: space;
+        &--item {
+            display: block;
+            width: 378px;
+            iframe {
+                display: block;
+                width: 355px;
+                height: 199px;
+                border-radius: 25px;
+            }
+        }
+    }
     &__img {
         display: block;
         width: 174px;
@@ -1155,6 +1171,19 @@ button:focus {
             &--item {
                 width: 500px;
                 margin: 0 auto;
+            }
+        }
+    }
+    .review {
+        &__video {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &--item {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -1841,6 +1870,16 @@ button:focus {
         }
         &__img {
             right: 20px;
+        }
+        &__video {
+            margin-top: 55px;
+            &--item {
+                width: 290px;
+                iframe {
+                    width: 290px;
+                    height: 160px;
+                }
+            }
         }
     }
     .sessions {
