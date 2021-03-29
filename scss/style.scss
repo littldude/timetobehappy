@@ -204,7 +204,7 @@ button:focus {
 .menu {
     display: none;
     position: absolute;
-    box-shadow: 0px 12px 10px #A98267;
+    box-shadow: 0px 12px 10px rgba(169, 130, 103, 0.6);
     &__link {
         color: $dark;
         font-weight: 500;
