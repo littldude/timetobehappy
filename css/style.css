@@ -442,8 +442,6 @@ button:focus {
   margin: 0 auto;
 }
 .button--sticky {
-  position: -webkit-sticky;
-  margin-bottom: 28%;
   position: sticky;
   top: 130px;
   left: 100%;
