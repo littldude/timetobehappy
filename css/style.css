@@ -76,6 +76,12 @@ button:focus {
   height: 20px;
 }
 
+.sticky {
+  display: block;
+  position: relative;
+  right: 0;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1193px;
@@ -207,6 +213,7 @@ button:focus {
 .menu {
   display: none;
   position: absolute;
+  box-shadow: 0px 12px 10px #A98267;
 }
 .menu__link {
   color: #231F20;
@@ -435,11 +442,13 @@ button:focus {
   margin: 0 auto;
 }
 .button--sticky {
+  position: -webkit-sticky;
+  margin-bottom: 28%;
   position: sticky;
   top: 130px;
   left: 100%;
   z-index: 1000;
-  transform: rotate(270deg);
+  transform: translateY(-120px) rotate(270deg);
   box-shadow: none;
   transform-origin: 100% 100%;
 }
@@ -1146,7 +1155,11 @@ button:focus {
 }
 @media (max-width: 834px) {
   .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
   }
   .header__menu {
     display: none;
@@ -1157,7 +1170,7 @@ button:focus {
 
   .menu {
     position: absolute;
-    top: 43px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1567,6 +1580,10 @@ button:focus {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
+  }
+
+  .menu {
+    top: 44px;
   }
 
   .list__bonus {
