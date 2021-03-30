@@ -1089,7 +1089,7 @@
     $('a[href*="#"]').on('click', function() {
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1200);
+    }, 5);
     return false;
     });
 </script>
@@ -1142,7 +1142,6 @@
                $('#UAH3').html(($price3 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
        }))
    });
-
 </script>
 <script>
     $(document).ready(function() {
