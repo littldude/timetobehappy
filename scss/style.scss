@@ -1281,6 +1281,11 @@ button:focus {
     }
 }
 @media (max-width: 1170px) {
+    .intro {
+        &__img {
+            width: 350px;
+        }
+    }
     .program {
         &__item {
             width: 350px;
@@ -1299,10 +1304,35 @@ button:focus {
     }
 }
 @media (max-width: 1112px) {
+    .intro {
+        &__img {
+            width: 300px;
+        }
+    }
     .bonus {
         &__img {
             width: 38%;
             height: auto;
+        }
+    }
+    .review {
+        &__video {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            &--item {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
@@ -1372,26 +1402,6 @@ button:focus {
             &--item {
                 width: 500px;
                 margin: 0 auto;
-            }
-        }
-    }
-    .review {
-        &__video {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            &--item {
-                margin-bottom: 30px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
             }
         }
     }
