@@ -116,6 +116,12 @@ button:focus {
     padding: 14px 0;
     -webkit-box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
             box-shadow: 0px 5px 10px rgba(169, 130, 103, 0.3);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     &__inner {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -343,7 +349,7 @@ button:focus {
         width: 162px;
     }
     &--loong {
-        width: 155px;
+        width: auto;
     }
     &--underline {
         &::after {
@@ -463,9 +469,17 @@ button:focus {
     }
     &--intro {
         margin-top: 34px;
+        &:hover {
+            background-color: #FF939C;
+            transition: .2s linear;
+        }
     }
     &--about {
         margin-top: auto;
+        &:hover {
+            background-color: #FF939C;
+            transition: .2s linear;
+        }
     }
     &--brown {
         background-color: #A66230;
@@ -478,6 +492,10 @@ button:focus {
         &:last-of-type {
             margin-right: 0;
         }
+        &:hover {
+            background-color: #FF939C;
+            transition: .2s linear;
+        }
     }
     &--yellow {
         background: #FFC193;
@@ -485,6 +503,10 @@ button:focus {
     }
     &--buy {
         margin: 0 auto;
+        &:hover {
+            background-color: #FF939C;
+            transition: .2s linear;
+        }
     }
     &--sticky {
         position: -webkit-sticky;
@@ -500,6 +522,10 @@ button:focus {
         -webkit-transform-origin: 100% 100%;
             -ms-transform-origin: 100% 100%;
                 transform-origin: 100% 100%;
+                &:hover {
+                    background-color: #FF939C;
+                    transition: .2s linear;
+                }
     }
 
 }
@@ -576,6 +602,18 @@ button:focus {
 .intro {
     padding: 60px 0 125px 0;
     position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 466px;
+        height: 466px;
+        top: 25%;
+        right: 0;
+        z-index: -10;
+        background: #FFDDC4;
+        opacity: 0.5;
+        filter: blur(200px);
+    }
     &__inner {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -712,6 +750,19 @@ button:focus {
 }
 .bonus {
     padding: 112px 0 0 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 466px;
+        height: 466px;
+        top: 20%;
+        right: 0;
+        z-index: -10;
+        background: #FFDDC4;
+        opacity: 0.5;
+        filter: blur(200px)
+    }
     &__inner {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -996,6 +1047,19 @@ button:focus {
 }
 .sessions {
     padding: 100px 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 466px;
+        height: 466px;
+        top: 25%;
+        right: 0;
+        z-index: -10;
+        background: #FFDDC4;
+        opacity: 0.5;
+        filter: blur(200px)
+    }
     &__inner {
         position: relative;
         margin-top: 67px;
@@ -1525,12 +1589,6 @@ button:focus {
 }
 @media (max-width: 834px) {
     .header {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
         &__menu {
             display: none;
         }
@@ -1582,6 +1640,9 @@ button:focus {
         &__img {
             margin-top: 50px;
             width: 300px;
+        }
+        &::after {
+            display: none;
         }
     }
     .title {
@@ -1695,6 +1756,9 @@ button:focus {
     }
     .bonus {
         padding: 60px 0 0 0;
+        &::after {
+            display: none;
+        }
         &__img {
             width: 50%;
             margin-top: 30px;
@@ -1772,6 +1836,9 @@ button:focus {
         display: block;
     }
     .sessions {
+        &::after {
+            display: none;
+        }
         &__inner {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -2214,6 +2281,13 @@ button:focus {
             }
         }
     }
+    .program {
+        &__item {
+            padding: 52px 20px 23px 20px;
+            width: 270px;
+            height: auto;
+        }
+    }
     .sessions {
         &__img {
             width: 65%;
@@ -2268,13 +2342,6 @@ button:focus {
             &--m {
                 width: 100%;
             }
-        }
-    }
-    .program {
-        &__item {
-            padding: 52px 10px 23px 10px;
-            width: 270px;
-            height: auto;
         }
     }
 }

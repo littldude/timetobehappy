@@ -62,9 +62,9 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <div class="header__logo">
+                    <a class="header__logo" href="https://vadimkurkin.com" target="_blank">
                         <img src="logo.png" alt="Образовательный центр Вадима Куркина">
-                    </div>
+                    </a>
                     <div class="menu">
                         <a class="menu__link" href="#step1">I ступень</a>
                         <a class="menu__link" href="#step2">II ступень</a>
@@ -1022,7 +1022,7 @@
                         <a class="button button--buy" href="#">Участвовать</a>
                     </div>
                     <div class="buy__inner--item">
-                        <h4 class="subtitle subtitle--buy subtitle--long">Участие во II ступени</h4>
+                        <h4 class="subtitle subtitle--buy subtitle--long">Участие в I и II ступени</h4>
                         <p class="text text--buy text--overline">42 000 р.</p>
                         <p class="text text--price" id="price2"></p>
                         <div class="buy__inner--currency">
@@ -1031,7 +1031,7 @@
                         <a class="button button--buy" href="#">Участвовать</a>
                     </div>
                     <div class="buy__inner--item">
-                        <h4 class="subtitle subtitle--buy subtitle--loong">Участие в III ступени</h4>
+                        <h4 class="subtitle subtitle--buy subtitle--loong">Участие в I, II и III ступени</h4>
                         <p class="text text--buy text--overline">60 000 р.</p>
                         <p class="text text--price" id="price3"></p>
                         <div class="buy__inner--currency">
@@ -1089,7 +1089,7 @@
     $('a[href*="#"]').on('click', function() {
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 5);
+    }, 500);
     return false;
     });
 </script>
@@ -1103,7 +1103,7 @@
                 0: {
                     items: 1,
                     center: true,
-                    autoWidth: true,
+                    // autoWidth: true,
                     margin: 20
                 },
                 569: {
