@@ -1615,7 +1615,7 @@ button:focus {
             -ms-flex-align: center;
                 align-items: center;
         background-color: #ffffff;
-        z-index: 100;
+        z-index: 10000;
         &__link {
             display: none;
             &:first-of-type {
@@ -1947,7 +1947,7 @@ button:focus {
             position: absolute;
             bottom: 20px;
             right: 100px;
-            z-index: 100;
+            z-index: 98;
             width: 75px;
             height: 75px;
         }
