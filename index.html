@@ -96,7 +96,7 @@
                         <p class="text text--medium">Онлайн-интенсив</p>
                         <h1 class="title title--intro">Время твоего счастья — сейчас!</h1>
                         <p class="text text--decoration text--medium">Для тех, кто хочет построить счастливые отношения с самой собой и мужчинами, обрести внутреннюю гармонию, целостность и начать жить полноценной жизнью</p>
-                        <p class="text text--date text--medium">Старт обучения - 30 ноября 2020 года</p>
+                        <p class="text text--date text--medium">Старт обучения - 14 июня 2021 года</p>
                         <a class="button button--intro" href="#buy">Принять участие
                             <svg><use href="sprite.svg#arrow"></use></svg>
                         </a>
@@ -1010,9 +1010,9 @@
         </section>
         <section class="buy">
             <div class="container">
-                <h2 class="title title--white" id="buy">Стоимость участия</h2>
+                <h2 class="title title--white">Стоимость участия</h2>
                 <div class="buy__inner">
-                    <div class="buy__inner--item">
+                    <div class="buy__inner--item" id="buy">
                         <h4 class="subtitle subtitle--buy">Участие в I ступени</h4>
                         <p class="text text--buy text--overline">20 000 р.</p>
                         <p class="text text--price" id="price1"></p>
@@ -1089,7 +1089,7 @@
     $('a[href*="#"]').on('click', function() {
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
+    }, 1500);
     return false;
     });
 </script>
@@ -1103,7 +1103,6 @@
                 0: {
                     items: 1,
                     center: true,
-                    // autoWidth: true,
                     margin: 20
                 },
                 569: {

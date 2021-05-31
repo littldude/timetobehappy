@@ -99,11 +99,12 @@ button:focus {
 
 .offer {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .offer:hover {
   color: #FFC193;
   transition: 0.2s linear;
+  text-decoration: none;
 }
 
 .header {
